@@ -810,7 +810,11 @@ def main():
             letter = finder
 
             filtered_items = [item for item in find_list if item.startswith(letter)]
-            print("Results: ", filtered_items)
+
+            if filtered_items:
+                print("Results: ", " | ".join(filtered_items))
+            else:
+                print("No element begins wih ", letter)
 
         if choice == 7:
             break
